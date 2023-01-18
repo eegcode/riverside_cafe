@@ -116,29 +116,3 @@ scrollToItems.forEach((item)=>{
 
 
 
-// google map
-let map;
-
-function initMap() {
-	const myLatLng = { lat: 34.104052, lng: -118.243244};
-  	map = new google.maps.Map(document.getElementById("map"), {
-    center: myLatLng,
-    zoom: 13,
-
-  mapTypeControlOptions: {
-    style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
-  }
-
-  });
-  new google.maps.Marker({
-    position: myLatLng,
-    map,
-    title: "RiverSide Cafe",
-  });
-}
-window.initMap = initMap;
-
-
-
-
-
