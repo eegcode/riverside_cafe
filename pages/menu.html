@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Menu - RiverSide Cafe</title>
+		<link rel="stylesheet" href="../css/menu.css">
+		<link rel="stylesheet" href="../css/global.css">
+		<!-- Font awesome -->
+		<script src="../assets/fa/all.min.js" defer></script>
+		<link rel="stylesheet" href="../assets/fa/all.min.css">
+	</head>
+	<body class="menuBody">
+		<header class="main-header menu-header">
+			<nav class="nav">
+				<div class="nav-left">
+					<div class="logo">
+						<a href="../index.html">Riverside Cafe</a>
+					</div>
+				</div>
+				<div class="return">
+					<a href="../index.html"><i class="fas fa-sign-out-alt"></i></a>
+				</div>
+			</nav>
+		</header>
+		<div class="menu-body">
+			<aside class="menu-sidebar">
+				<div class="close-sidebar">
+					<span>
+						<i class="fa fa-times"></i>
+					</span>
+				</div>
+				<div class="search">
+					<form id="searchForm" action="">
+						<input type="text" id="search-menu-item" placeholder="Search">
+						<button><i class="fa fa-search"></i></button>
+					</form>
+					
+				</div>
+				<div class="categories" id="menu-browse-category">
+					<h1 class="title">Browse by categories</h1>
+					<button class="active" value="MENU">All</button>
+					<button value="BESTFOODS">Best-foods</button>
+					<button value="BBQS">BBQs</button>
+					<button value="BREADS">Breads</button>
+					<button value="BURGERS">Burgers</button>
+					<button value="CHOCOLATES">Chocolates</button>
+					<button value="DESSERTS">Desserts</button>
+					<button value="DRINKS">Drinks</button>
+					<button value="FRIEDCHICKENS">Fried-chickens</button>
+					<button value="ICECREAM">Ice-cream</button>
+					<button value="PIZZAS">Pizzas</button>
+					<button value="PORKS">Porks</button>
+					<button value="SANDWICHES">Sandwiches</button>
+					<button value="SAUSAGES">Sausages</button>
+					<button value="STEAKS">Steaks</button>
+				</div>
+			</aside>
+			<section class="menu-container scrollLocation" data-scrollLocation="menu">
+				<section class="menuPagination">
+					<div class="main-title menu-main-title">
+						<h1>Our Menu </h1>
+					</div>
+					
+					<!-- <div class="menu__container"> -->
+					<section class="menu-item-container" id="menuItemContainer">
+						<!-- Contains list of foods loaded from js -->
+						
+					</section>
+					<section  id="menuPaginationOptionsContainer">
+						<!-- Contains pagination options loaded from js -->
+					</section>
+					<!-- </div> -->
+					
+				</section>
+				
+			</section>
+		</div>
+		
+		
+		
+		
+		
+		
+		<script src="../assets/pagination/jquery.min.js"></script>
+		<script src="../assets/pagination/pagination.min.js"></script>
+		<script src="../js/menu.js"></script>
+	</body>
+</html>
+

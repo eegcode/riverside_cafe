@@ -1,0 +1,815 @@
+/*************************Landing Page stylings************************/
+
+.landing{
+	height: 100vh;
+	width:100vw;
+	position:relative;
+	color:#eee;
+}
+
+.landing-img{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	object-fit: cover;
+	z-index: -10;
+}
+.landing::before{
+	content:"";
+	position:absolute;		
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background: linear-gradient(to right, rgba(0,0,0,.7), rgba(0, 0, 0, .4), transparent, transparent);
+	z-index: -9;
+}
+.landing::after{
+	content:"";
+	position:absolute;		
+	left:0;
+	bottom:0;
+	width:100%;
+	height:500px;
+	background: linear-gradient(360deg, rgba(17, 17, 17, 1), transparent, transparent);
+	z-index: -8;
+}
+
+
+
+
+/*--------landing page texts--------*/
+.landing .texts{
+	position:absolute;
+	top:50%;
+/*	left:50%;*/
+	transform:translate(0%, -50%);
+	margin-left: 150px;
+	width:600px;
+
+}
+
+.landing .texts .title{
+	color:#fff;
+	font-weight: 800;
+	font-size: 5rem;
+	line-height: 4.8rem;
+}
+
+.landing .texts .subtitle{
+	font-size: .9rem;
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+.landing .texts .buttons{
+	margin-top: 20px;
+}
+
+.landing .texts .buttons button{
+	border:1px solid #fff;
+	outline:none;
+	padding:10px 20px;
+	border-radius: 3px;
+	font-size: 1rem;
+	font-weight: 600;
+	background: #eee;
+	color: #ff7700;
+	transition: background .1s linear;
+}
+
+.landing .texts .buy-now:hover{
+	background: transparent;
+
+}
+
+.landing .texts .buttons .explore{
+	background: transparent;
+	color:#fff;
+	margin-left: 10px;
+	border: 1px solid #ff7700;
+}
+
+.landing .texts .buttons .explore:hover{
+	background: #eee;
+	color:#ff7700;
+	border: 1px solid #eee;
+
+}
+
+/*--------landing page texts--------*/
+
+
+
+/********************* About Section Stylings Started *******************************/
+
+.about{
+
+}
+
+.about .about-container{
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+/*	justify-content: center;*/
+/*	align-items: start;*/
+/*	flex-wrap: wrap;*/
+	width:80vw;
+	margin:auto;
+}
+
+
+.about .about-container article{
+	padding:30px 50px;
+	border-radius: 3px;
+	margin:10px;
+	border: 0.1px dashed rgba(255, 119, 0,.5);
+	cursor:default;
+}
+.about .about-container article:hover{
+	border-color: rgba(255, 119, 0,.9);
+}
+
+.about .about-container article .title{
+	position:relative;
+	color:#aaa;
+	margin-bottom: 25px;
+	width:fit-content;
+}
+.about .about-container article:hover .title{
+	color:#ddd;
+}
+
+.about .about-container article .title:before{
+	content:"";
+	position:absolute;
+	bottom:-5px;
+	left:50%;
+	transform:translateX(-50%);
+	width:20%;
+	height:2px;
+	background: rgba(255, 119, 0,.8);
+	transition:width .3s ease;
+}
+
+.about .about-container article:hover .title:before{
+	width:40%;
+	background: rgba(255, 119, 0,1);
+
+}
+
+.about .about-container article .description{
+	color:#777;
+}
+
+.about .about-container article:hover .description{
+	color:#999;
+}
+
+.about .about-container article .description .list{
+	text-align: left;
+	margin:20px 0;
+}
+
+.about .about-container article button{
+	border:.1px solid rgba(255, 119, 0,.5);
+	background: transparent;
+	outline:none;
+	color:#999;
+	border-radius: 3px;
+	transition: background .1s linear;
+	margin-top: 15px;
+}
+.about .about-container article button:hover{
+	background: #eee;
+	color: #ff7700;
+}
+
+
+/********************* About Section Stylings Completed *******************************/
+
+
+
+
+/**************** Menu Section Stylings Started *********************/
+.menu-container .btn-container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.menu-container .btn-container button{
+	margin: 1rem .5rem;
+	border: 1px solid #ff7700;
+	background: transparent;
+	color:#ddd;
+	border-radius: 5px;
+	font-size: .9rem;
+	padding:7px 15px;
+	transition:background .1s linear;
+}
+
+.menu-container .btn-container button:hover{
+	border: 1px solid #ddd;
+	background: #ddd;
+	color:#ff7700;
+/*	outline:2px 3px #ff7700;*/
+}
+
+
+section.menu-item-container{
+	width: 100%;
+	margin-top: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	min-height: 420px;
+
+}
+
+section.menu-item-container article.item {
+	border-radius: 5px;
+	border:1px solid rgba(255,255,255,.2);
+	height: 25vh;
+	width: 540px;
+	min-height: 130px;
+	display: flex;
+	margin: .7rem .3rem;
+	padding:20px;
+	margin-right: 20px;
+	cursor:pointer;
+	position:relative;
+}
+
+section.menu-item-container article.item .add-to-cart{
+	position: absolute;
+	top:0;
+	right:0;
+	padding:10px;
+}
+
+
+section.menu-item-container article.item:hover {
+	border:1px solid rgba(255,255,255,.5);
+}
+
+section.menu-item-container article.item img{
+	margin: auto;
+	height: 140px;
+	width:500px;
+	object-fit: cover;
+	border-radius: 10px;
+	border: 4px solid #ff9e4a;
+	opacity:.9;
+}
+
+section.menu-item-container article.item header{
+	border-bottom: 1pt dotted blueviolet;
+	margin: .5rem 1rem 0 1rem;
+	display: flex;
+	justify-content: space-between;
+	color: #f07000;
+}
+
+section.menu-item-container article.item header span{
+	margin: 0 .0rem;
+	font-size: 1.1rem;
+	font-weight: 500;
+	text-transform: capitalize;
+	/* padding: .5rem 1rem; */
+}
+
+section.menu-item-container article.item header .title{
+	font-weight: 700;
+}
+
+section.menu-item-container article.item header .price{
+	font-size: 1rem;
+}
+
+section.menu-item-container article.item .description{
+	padding: .5rem 1rem;
+	text-align: justify;
+	font-size: .93rem;
+	font-weight: 400;
+	line-height: 1.2rem;
+	color: #888;
+}
+
+section.menu-item-container article.item:hover .description{
+	color:#ccc;
+}
+section.menu-item-container article.item:hover img{
+	opacity:1;
+}
+
+section.menu-item-container article.item:hover header{
+	color:#ff7700;
+}
+
+/**************** Menu Section Stylings Completed *********************/
+
+
+/******************* Event section Sylings started ********************************/
+
+.events{
+	text-align: center;
+}
+
+.events .event-container{
+	min-height:530px;
+	background: #131313;
+	width:60%;
+	border-radius: 5px;
+	box-shadow: 0 0 10px 3px rgba(200, 200, 200, .05);
+	margin:auto;
+}
+
+.events .event-container .slide-container{
+/*	position:relative;*/
+	display:flex;
+	justify-content: center;
+	width:100%;
+
+}
+
+.events .event-container .slide-container .slide{
+	padding:20px 40px;
+	width:100%;
+	display:flex;
+	justify-content: center;
+}
+
+.events .event-container .slide-container .slide .img-container{
+}
+
+.events .event-container .slide-container .slide img{
+	width:500px;
+	height:280px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.events .event-container .slide-container .slide .texts{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.events .event-container .slide-container .slide .texts .title{
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-top: 20px;
+}
+
+
+.events .event-container .slide-container .slide .texts .date::before{
+	content: "";
+	position:absolute;
+	bottom:-5px;
+	left:50%;
+	transform:translateX(-50%);
+	height:2px;
+	width:20px;
+	background: #ff7700;
+}
+
+.events .event-container .slide-container .slide .texts .date{
+	font-size: .8rem;
+	font-weight: 700;
+	font-style: italic;
+	position:relative;
+	margin-top: 5px;
+}
+
+.events .event-container .slide-container .slide .texts .description{
+	width:80%;
+	font-size: .95rem;	
+	margin-top: 20px;
+}
+
+.events .event-container .slide-container .slide .texts button{
+	outline:none;
+	border: 1px solid #ff7700;
+	background: transparent;
+	color:white;
+	transition:background .1s linear;
+	margin-top: 20px;
+}
+
+.events .event-container .slide-container .slide .texts button:hover{
+	background: #ddd;
+	color:#ff7700;
+	border: 1px solid #ddd;
+
+}
+
+
+/******************* Event section Sylings Ended ********************************/
+
+
+
+
+
+/******************* Contact section Sylings Started ********************************/
+
+.contact{
+	margin-bottom: 200px;
+}
+
+.contact .contact-container{
+	display:flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	width:80vw;
+	margin: 0 auto;
+	border: 1px solid white;
+	height:580px;
+	overflow: hidden;
+	padding:30px 60px 40px 60px;
+}
+
+.contact .contact-container form{
+	width:50%;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact .contact-container form .title,
+.contact .map-container .title{
+	text-align: center;
+	margin-bottom: 30px;
+	font-weight: 700;
+}
+
+.contact .contact-container form label{
+	font-weight: 500;
+	margin-bottom: 5px;
+	display:block;
+	font-size: 1.1rem;
+}
+
+.contact .contact-container form > div{
+	margin-bottom: 20px;
+	width:100%;
+}
+
+.contact .contact-container form input, 
+.contact .contact-container form textarea{
+	border:none;
+	font-size: 1.1rem;
+	color:#111;
+	padding:7px 15px;
+	border-radius: 3px;
+	width:100%;
+	color:#444;
+	background: #eee;
+	transition:background .1s linear;
+}
+
+.contact .contact-container form input::placeholder, 
+.contact .contact-container form textarea::placeholder{
+color:#aaa;
+	font-weight: 100;
+	text-align: left;
+}
+
+.contact .contact-container form textarea{
+	position: relative;;
+	overflow:auto;
+	resize: none;
+}
+
+/*Custom Scrollbar for text area */
+
+	.contact .contact-container form textarea::-webkit-scrollbar-track
+	{
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+		border-radius: 10px;
+		background-color: #F5F5F5;
+	}
+
+	.contact .contact-container form textarea::-webkit-scrollbar
+	{
+		width: 8px;
+		background-color: #F5F5F5;
+		
+	}
+
+	.contact .contact-container form textarea::-webkit-scrollbar-thumb
+	{
+		border-radius: 10px;
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.2);
+		background-color: #bbb;
+	}
+/*Custom Scrollbar for text area */
+
+
+.contact .contact-container form input:hover, 
+.contact .contact-container form textarea:hover{
+	background: #fff;
+	outline:2px solid rgba(255,255,255,.4);
+
+}
+
+.contact .contact-container form button{
+	width:100%;
+	border: 1px solid #ff7700;
+	border-radius: 3px;
+	font-size: 1rem;
+	font-weight: 600;
+	color: #ff7700;
+	transition: background .1s linear;
+	color:#ddd;
+	background: transparent;
+}
+
+.contact .contact-container form button:hover{
+	background: #ddd;
+	color:#ff7700;
+	border:1px solid #ddd;
+}
+
+
+.contact .map-container{
+	width:45%;
+	height:100%;
+}
+
+
+.contact .map-container .title{
+	margin-bottom:60px;
+
+}
+
+.contact .map-container #map{
+	width:100%;
+	height: calc(100% - 145px);
+	background: red;
+	border-radius: 5px;
+}
+/******************* Contact section Sylings Ended ********************************/
+
+
+
+
+
+/******************* Footer section Sylings Started ********************************/
+
+footer.main-footer{
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+	width:100%;
+	background: #222;
+	padding:20px;
+	font-size: 13px;
+	z-index: 1111;
+}
+
+footer.main-footer div{
+	text-align: center;
+
+}
+
+
+footer.main-footer .about{
+	
+}
+
+footer.main-footer .contact-info{
+	
+}
+
+footer.main-footer .contact-info button{
+	padding:0 !important;
+	border:none !important;
+	background: transparent !important;
+	cursor:pointer;
+	font-weight: 600;
+	color:#ddd;
+}
+footer.main-footer .contact-info button:hover{
+	color:#ff7700;
+}
+
+footer.main-footer .footer-nav{
+	margin-right: 60px;
+
+}
+
+footer.main-footer .footer-nav ul{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	width:110px;
+}
+
+footer.main-footer .footer-nav ul li{
+	list-style-type: none;
+	cursor: pointer;
+	text-transform: capitalize;
+	margin-right: 10px;
+}
+
+
+footer.main-footer .footer-nav ul li a{
+	text-decoration: none;
+	color:#eee;
+/*	display:flex;*/
+}
+
+footer.main-footer .footer-nav ul li a .icon{
+	opacity:0;
+	transition: .3s linear;
+	font-weight: 100;
+}
+
+footer.main-footer .footer-nav ul li:hover a .icon{
+	opacity:.3;
+}
+footer.main-footer .footer-nav ul li:hover a,
+footer.main-footer .footer-nav ul li:hover{
+		color:#ff7700;
+}
+
+
+/******************* Footer section Sylings Ended ********************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 1276px){
+   .events .event-container{
+	width:70%;
+}
+	
+}
+
+
+
+@media(max-width: 1111px){
+   .landing .texts {
+    	margin-left: 70px;
+	}
+
+	
+}
+
+@media(max-width: 1024px){
+   .landing .texts {
+/*    	margin-left: 50px;*/
+	}
+	.landing .texts .title {
+	    font-size: 4rem;
+	    line-height: 3.8rem;
+	}
+	.events .event-container{
+	width:80%;
+}
+
+.contact .contact-container {
+    width: 80vw;
+    padding: 20px 30px 40px 30px;
+}
+	
+}
+
+@media(max-width: 940px){
+   .about .about-container {
+    grid-template-columns: 1fr;
+    width: 80vw;
+    margin: auto;
+}
+.events .event-container{
+	width:90%;
+}
+
+.contact .contact-container {
+	flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border:none;
+    height:1200px;
+    overflow: unset;
+}
+.contact .contact-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.contact .map-container {
+    width: 100%;
+}
+.contact .map-container .title {
+    margin-bottom: 20px;
+}
+	
+}
+
+@media(max-width: 856px){
+.landing .texts {
+    	margin-left: 50px;
+	}
+
+footer.main-footer {
+	flex-direction: column;
+    justify-content: space-between;
+    align-items: space-around;
+    height:350px;
+    padding: 50px 20px;
+}
+.contact{
+	margin-bottom: 0;
+}
+
+}
+
+
+@media(max-width: 768px){
+   .landing .texts .title {
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 3.2rem;
+}
+.landing .texts {
+    width: 350px;
+  	margin-left: 70px;
+}
+
+}
+
+
+@media(max-width: 658px){
+   .landing .texts .title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+.landing .texts {
+    width: 300px;
+    margin-left: 50px;
+}
+.landing .texts .subtitle {
+    font-size: .8rem;
+    font-weight: 400
+    margin-top: 4px;
+}
+.landing .texts .buttons {
+    margin-top: 15px;
+}
+
+.landing .texts .buttons button {
+    padding: 7px 15px;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.events .event-container .slide-container .slide .texts .title {
+    font-size: 1.2rem;
+}
+.events .event-container .slide-container .slide .texts .description {
+    width: 95%;
+    font-size: .90rem;
+}
+
+.contact .contact-container {
+    height:1000px;
+}
+
+}
+
+@media(max-width: 444px){
+	.landing .texts {
+    margin-left: 20px;
+}
+
+.about .about-container{
+	width:90vw;
+}
+
+.about .about-container article {
+    padding: 20px 30px;
+}
+
+
+footer.main-footer h2{
+	font-size: 1rem;
+}
+}
