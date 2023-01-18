@@ -548,7 +548,7 @@ color:#aaa;
 .contact .map-container #map{
 	width:100%;
 	height: calc(100% - 145px);
-	background: red;
+/* 	background: red; */
 	border-radius: 5px;
 }
 /******************* Contact section Sylings Ended ********************************/
